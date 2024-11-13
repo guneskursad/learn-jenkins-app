@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Run Parallel Branches') {
             parallel {
                 stage('Branch A') {
                     steps {
@@ -16,6 +15,4 @@ pipeline {
                 }
             }
         }
-    }
 }
-    
