@@ -1,16 +1,14 @@
 pipeline {
     agent any
     stage ('run parallel branches') {
-        steps {
-            parallel(
-              a: {
+            parallel {
+              stage ('branch A') {
                 echo "This is branch a"
               },
-              b: {
+              stage ('branch B') {
                 echo "This is branch b"
               }
-            )
-        }
+            }
     }
 /*
     stages {
